@@ -43,7 +43,7 @@ gql`
 `;
 
 export const MyTodo = () => {
-  const { logout } = useAuth0();
+  const { logout, idToken } = useAuth0();
   const { data, loading, error } = useMyTodoSubscription();
   // eslint-disable-next-line
   const [someLoading, setSomeLoading] = useState<boolean>(false);
